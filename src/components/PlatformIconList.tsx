@@ -1,4 +1,3 @@
-//  Importujemy wszystkie te Iconsy, czesc z nich nie ma w react-icons wiec importujemy z innych miejsc
 import {
   FaWindows,
   FaPlaystation,
@@ -12,7 +11,6 @@ import { SiNintendo } from "react-icons/si";
 import { BsGlobe } from "react-icons/bs";
 
 import { HStack, Icon } from "@chakra-ui/react";
-// Zaciagamy interface PLatform z useGames by nie kopiowac ponownie
 import { Platform } from "../hooks/useGames";
 import { IconType } from "react-icons";
 
@@ -39,9 +37,9 @@ const PlatformIconList = ({ platforms }: Props) => {
       {platforms.map((platform) => {
         return (
           <Icon
+            key={platform.id}
             as={iconMap[platform.slug]}
             color="gray.500"
-            key={platform.id}
           ></Icon>
         );
       })}
