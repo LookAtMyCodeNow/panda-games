@@ -4,10 +4,9 @@ import GameGrid from "./components/GameGrid";
 import GenreList from "./components/GenreList";
 import { useState } from "react";
 import { Genre } from "./hooks/useGenres";
+import "./App.css";
 
 function App() {
-  // Musi byc typ <Genre> albo <null> bo null wysyla blad ze null nie jest formatu <Genre>
-  // To po to by uniknac bledu kompilacji
   const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
 
   return (
@@ -18,8 +17,9 @@ function App() {
       }}
       templateColumns={{
         base: "1fr",
-        lg: "200px 1fr",
+        lg: "160px 1fr",
       }}
+      // bg={"blue.900"}
     >
       <GridItem area="nav">
         <NavBar />
