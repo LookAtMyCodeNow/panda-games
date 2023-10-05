@@ -37,6 +37,7 @@ const GenreList = ({ selecteGenre, onSelectGenre }: Props) => {
               onClick={() => onSelectGenre(genre)}
               fontSize="lg"
               variant="link"
+              whiteSpace={"break-spaces"}
             >
               {genre.name}
             </Button>

@@ -18,6 +18,6 @@ export interface Game {
 
   //  Zmiana tego jakie gry nam pokazuje, paramas to funkcja wbudowana w rawg.iom sluzy do selekcji gier
   // params czyli selekcja od czego? od genres a po przecinku jakie genres pokazuje? te o danym id chyba:D beka:D
-const useGames = (selectedGenre: Genre | null ) => useData<Game>('/games', {params: {genres: selectedGenre?.id}}, [selectedGenre?.id])
+const useGames = (selectedGenre: Genre | null, selectedPlatform: Platform | null ) => useData<Game>('/games', {params: {genres: selectedGenre?.id, platforms: selectedPlatform?.id}}, [selectedGenre?.id, selectedPlatform?.id])
 
 export default useGames;

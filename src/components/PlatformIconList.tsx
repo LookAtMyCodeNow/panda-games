@@ -40,6 +40,7 @@ const PlatformIconList = ({ platforms }: Props) => {
             key={platform.id}
             as={iconMap[platform.slug]}
             color="gray.500"
+            boxSize={"22px"}
           ></Icon>
         );
       })}
